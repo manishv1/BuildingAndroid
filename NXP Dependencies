@@ -1,0 +1,17 @@
+NXP compiler toolchain dependencies
+ The compiler dependencies should be installed in ${HOME}/opt/, the path is used by the Docker build scripts. 
+
+Clang
+# Clang
+$ mkdir -p ${HOME}/opt/prebuilt-android-clang
+$ cd ${HOME}/opt/prebuilt-android-clang
+$ git init
+$ git remote add origin https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86
+$ git fetch origin bceb7274dda5bb587a5473058bd9f52e678dde98
+$ git reset --hard FETCH_HEAD
+
+ARM compiler
+# GCC ARM tool chain
+$ cd ${HOME}/opt/
+$ curl -L -o gcc-arm-8.3-2019.03-x86_64-aarch64-linux-gnu.tar.xz https://developer.arm.com/-/media/Files/downloads/gnu-a/8.3-2019.03/binrel/gcc-arm-8.3-2019.03-x86_64-aarch64-linux-gnu.tar.xz?revision=2e88a73f-d233-4f96-b1f4-d8b36e9bb0b9&hash=C6CE74D7E1189F53EAC2D9DB08AADE29
+$ tar xvf gcc-arm-8.3-2019.03-x86_64-aarch64-linux-gnu.tar.xz
