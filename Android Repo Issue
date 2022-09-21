@@ -1,0 +1,8 @@
+This is because the repo packet in Ubuntu is actually not working properly…
+You can use the Google Repo binary with :
+
+$ mkdir -p ~/.bin
+$ PATH="${HOME}/.bin:${PATH}"
+$ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
+$ chmod a+rx ~/.bin/repo
+Be sure to have python 3 installed.
